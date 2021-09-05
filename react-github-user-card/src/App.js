@@ -8,6 +8,7 @@ class App extends React.Component {
 
   state = {
     user: [],
+    userContributions: [],
     userFollowers: [],
   }
 
@@ -34,8 +35,8 @@ componentDidMount(){
   .catch(err => {
     console.log(err)
   })
-}
 
+}
 
   render() {
     return (
