@@ -8,7 +8,6 @@ class App extends React.Component {
 
   state = {
     user: [],
-    userContributions: [],
     userFollowers: [],
   }
 
@@ -18,6 +17,7 @@ componentDidMount(){
     .then(res => {
       console.log(res.data);
       this.setState({
+        ...this.state,
         user: res.data
       })
     })
@@ -29,6 +29,7 @@ componentDidMount(){
   .then(res => {
     console.log('from followers', res.data);
     this.setState({
+      ...this.state,
       followers: res.data
     })
   })
